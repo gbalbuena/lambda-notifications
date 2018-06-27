@@ -12,6 +12,7 @@
     "lint": "eslint ./src",
     "precommit": "lint-staged",
     "serve": "serverless offline start",
+    "serve:dev": "export NODE_ENV=stage && yarn serve",
     "tail:hello": "serverless logs --function hello --tail",
     "test": "jest",
     "test:coverage": "jest --coverage",
@@ -43,11 +44,17 @@
     "webpack-node-externals": "^1.5.4"
   },
   "dependencies": {
-    "babel-runtime": "^6.22.0"
+    "babel-runtime": "^6.22.0",
+    "prettier": "^1.13.6",
+    "string-template": "^1.0.0",
+    "winston": "^3.0.0"
   },
   "jest": {
     "verbose": false,
-    "coverageReporters": [ "clover", "text-summary" ]
+    "coverageReporters": [
+      "clover",
+      "text-summary"
+    ]
   },
   "lint-staged": {
     "src/**/*.js": [

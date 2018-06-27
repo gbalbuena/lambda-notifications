@@ -76,7 +76,7 @@ functions:
     events:
       - http:
           path: notification
-          method: get
+          method: post
       # Ping every 5 minutes to avoid cold starts
       - schedule:
           rate: rate(5 minutes)
